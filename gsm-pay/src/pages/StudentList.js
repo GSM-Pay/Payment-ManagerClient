@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import Point from 'components/Point'
+import Users from 'components/Users'
 import {
     Grid,
     Container,
     Menu,
     Header,
     List,
-    Image,
     Dropdown,
     Segment
 } from 'semantic-ui-react'
@@ -65,110 +64,7 @@ class StudentList extends Component {
                             </List.Content>
                         </List.Item>
 
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>곽은상</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784465.svg' />
-                            <List.Content>김규리</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>김재남</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>김지웅</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>남승우</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784465.svg' />
-                            <List.Content>노아련</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>박건도</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>신엽</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>신주원</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>이성범</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784465.svg' />
-                            <List.Content>이세연</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>이의현</List.Content>
-                        </List.Item>
-
-                        <List.Item style={{ padding: '12px' }}>
-                            <List.Content floated='right'>
-                                <Point />
-                            </List.Content>
-                            <Image avatar src='https://www.flaticon.com/svg/static/icons/svg/2784/2784461.svg' />
-                            <List.Content>임태건</List.Content>
-                        </List.Item>
-
+                        <Users />
                     </List>
                 </Grid.Column>
                 <Segment inverted vertical style={{ padding: '7em 0em', marginTop: '20px' }}>
