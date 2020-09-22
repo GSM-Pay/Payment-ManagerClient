@@ -1,7 +1,21 @@
 import React from 'react'
-import { Button, Header, Form, Input, Modal, Grid } from 'semantic-ui-react'
+import { Button, Header, Form, Input, Modal } from 'semantic-ui-react'
 
-function ModalExampleModal() {
+import { gql, useMutation } from '@apollo/client'
+
+const ADD_AMOUNT = gql`
+  mutation AddAmount($pid: Int!, $amount: Int!) {
+    addAmount(pid: $pid, amount: $amount) {
+      pid
+      amount
+    }
+  }
+`;
+
+function ModalExampleModal(props) {
+  let amount;
+  const [addAmount] = useMutation(ADD_AMOUNT);
+
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -18,7 +32,7 @@ function ModalExampleModal() {
             <Form>
               <Form.Field inline>
                 <label>금액</label>
-                <Input placeholder='금액 입력' />
+                <Input placeholder='금액 입력' onChange={e => amount = e.target.value}/>
                 <label style={{ marginLeft: '10px' }} >원</label>
               </Form.Field>
             </Form>
@@ -34,7 +48,19 @@ function ModalExampleModal() {
           content="충전하기"
           labelPosition='right'
           icon='checkmark'
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            console.dir(amount)
+            addAmount({
+              variables: {
+                pid: props.user.pid,
+                amount: parseInt(amount),
+              }
+            }).then(result => {
+              setOpen(false)
+            }).catch(err => {
+              console.log(err)
+            })
+          }}
           positive
         />
       </Modal.Actions>
